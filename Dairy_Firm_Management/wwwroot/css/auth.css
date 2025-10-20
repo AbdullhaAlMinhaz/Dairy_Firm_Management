@@ -1,0 +1,185 @@
+﻿/* === Blue Gradient Theme (Corrected & Updated) === */
+
+/* Using Poppins font - make sure to import it in your _Layout.cshtml if needed */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #e9ecef 0%, #d1e7ff 100%);
+    margin: 0;
+    padding: 20px;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    flex-direction: column;
+}
+
+.page-title {
+    color: #007bff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 450px;
+}
+
+    .auth-box h2 {
+        color: #007bff;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+/* --- Input Fields & Labels --- */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+    .input-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #555;
+    }
+
+    /* Base style for ALL inputs */
+    .input-group input {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1rem;
+        border-radius: 12px;
+        border: 1px solid #ced4da;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+        }
+
+/* ✅ START: PASSWORD FIELD FIX */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Forces the wrapper to be full-width */
+}
+
+    .password-wrapper input {
+        flex-grow: 1; /* Allows the input to fill the space */
+        padding-right: 45px; /* Adds space for the eye icon */
+    }
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+}
+/* ✅ END: PASSWORD FIELD FIX */
+
+.text-danger {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #dc3545;
+}
+
+/* --- Buttons & Links --- */
+.btn-auth {
+    background: linear-gradient(45deg, #007bff, #17a2b8) !important;
+    color: white !important;
+    border: none !important;
+    padding: 14px !important;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+    .btn-auth:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    }
+
+.switch-page {
+    margin-top: 20px;
+    color: #555;
+    text-align: center;
+}
+
+    .switch-page a {
+        color: #007bff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+/* --- Login Page Specifics --- */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    font-size: 0.9em;
+}
+
+    .login-options a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+    .checkbox-group label {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: #555;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 0.5rem;
+        width: 1em;
+        height: 1em;
+    }
+/* === Fix for uneven input field widths === */
+.input-group input,
+.password-wrapper input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Keep form alignment centered */
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
