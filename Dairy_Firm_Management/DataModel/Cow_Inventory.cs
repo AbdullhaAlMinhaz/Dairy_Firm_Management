@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Dairy_Firm_Management.Models
+namespace Dairy_Firm_Management.DataModel
 {
     public class Cow_Inventory
     {
-        [Key]
-        public int Cow_Id { get; set; }
+        public Guid Cow_Id { get; set; } = Guid.NewGuid();
+        //public int Cow_Id { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
         public double Weight { get; set; }
