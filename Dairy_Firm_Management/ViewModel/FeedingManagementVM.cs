@@ -1,17 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Dairy_Firm_Management.DataModel
+﻿namespace Dairy_Firm_Management.ViewModel
 {
-    public class FeedingManagement
+    public class FeedingManagementVM
     {
-        [Key]
         public Guid FeedingId { get; set; }
         public Guid CowId { get; set; }
-        public string? FoodType { get; set; } 
+        public string? FoodType { get; set; }
         public DateTime FeedingTime { get; set; }
         public double FeedingQuantity { get; set; }
-
     }
 }
-
-
